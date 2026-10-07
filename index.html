@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#2a060d">
+    <title>dx/dev: Calculus Through a Developer's Eyes | Jose Miguel M. Estacio</title>
+    <link rel="icon" href="images/hau-seal.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header and navigation -->
+    <header class="site-header">
+        <nav class="nav-bar" id="siteNav" aria-label="Main navigation">
+            <a class="brand" href="#home">
+                <img class="seal" src="images/hau-seal.png" alt="Holy Angel University seal">
+                dx/dev
+            </a>
+
+            <button class="menu-button" type="button" aria-expanded="false"
+                    aria-controls="navList" aria-label="Open menu">Menu</button>
+
+            <ul class="nav-list" id="navList">
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#about">About Me</a></li>
+                <li><a class="nav-link" href="#journey">Calculus Journey</a></li>
+                <li><a class="nav-link" href="#learning">Learning Artifacts</a></li>
+                <li><a class="nav-link" href="#tech">Calculus in IT</a></li>
+                <li><a class="nav-link" href="#growth">My Growth</a></li>
+                <li><a class="nav-link" href="#reflection">Final Reflection</a></li>
+                <li><a class="nav-link" href="#references">References</a></li>
+            </ul>
+        </nav>
+
+        <div class="scroll-curve" aria-hidden="true">
+            <svg id="scrollCurve"></svg>
+        </div>
+    </header>
+
+
+    <main class="page">
+
+        <!-- Home / landing page -->
+        <section class="hero" id="home">
+            <div>
+                <h1>dx/dev: Calculus Through a Developer's Eyes</h1>
+                <p class="hero-subtitle">How rates of change and limits show up in the code I write.</p>
+
+                <dl class="info-list">
+                    <dt>Student</dt>
+                    <dd>Jose Miguel M. Estacio</dd>
+                    <dt>Program</dt>
+                    <dd>2nd Year, IT-WEBDEV</dd>
+                    <dt>Subject</dt>
+                    <dd>2CALC-IT</dd>
+                    <dt>Instructor</dt>
+                    <dd>Jonathan Santos Mallari</dd>
+                    <dt>Term</dt>
+                    <dd>First Semester, Finals</dd>
+                </dl>
+
+                <p class="hero-links">
+                    <a href="#learning">See my work</a> |
+                    <a href="#growth">How I improved</a> |
+                    <a href="#reflection">Final reflection</a>
+                </p>
+            </div>
+
+            <div class="graph-box">
+                <svg id="graphPlot" viewBox="0 0 440 280" role="img"
+                     aria-label="Graph of f(x) = sin(x) with a tangent line that moves with the slider">
+                    <g class="graph-axes">
+                        <line x1="10" y1="140" x2="430" y2="140"></line>
+                        <line x1="220" y1="10" x2="220" y2="270"></line>
+                    </g>
+                    <path class="graph-curve" id="graphCurve"></path>
+                    <line class="graph-tangent" id="graphTangent"></line>
+                    <circle class="graph-point" id="graphPoint" r="6"></circle>
+                </svg>
+
+                <div class="graph-controls">
+                    <label for="graphSlider">x</label>
+                    <input id="graphSlider" type="range" min="-3.14" max="3.14" step="0.01" value="0.8">
+                    <output id="graphReadout" for="graphSlider"></output>
+                </div>
+
+                <p class="graph-note">
+                    Drag the slider. The yellow line is the tangent: its slope is the
+                    derivative f'(x) = cos(x).
+                </p>
+            </div>
+        </section>
+
+
+        <!-- About me -->
+        <section class="section" id="about">
+            <h2>About Me</h2>
+
+            <div class="about-layout">
+                <img class="portrait" src="images/profile.jpg" alt="Photo of Jose Miguel M. Estacio">
+
+                <div class="about-text">
+                    <p>
+                        Hi, I'm Jose Miguel M. Estacio, a second-year student in the IT-WEBDEV program
+                        at Holy Angel University. I want to become a full-stack developer, so I can work
+                        on both the part users see and the part running behind it.
+                    </p>
+                    <p>
+                        I like building web pages and connecting them to data. I learn the most when I'm
+                        fixing bugs, and I want to get better at both front-end and back-end.
+                    </p>
+                    <p>
+                        When this course started, I thought Calculus had nothing to do with programming.
+                        I knew it was used in things like animation and graphics, but I couldn't see how.
+                        I hoped to learn how to solve problems step by step and to understand why the
+                        formulas work instead of just memorizing them. This portfolio shows how my
+                        thinking changed. Check <a href="#growth">My Growth</a> and my
+                        <a href="#reflection">Final Reflection</a> to see how.
+                    </p>
+                </div>
+            </div>
+
+            <p class="related back-to-top"><a href="#home">Back to top</a></p>
+        </section>
+
+
+        <!-- Portfolio overview -->
+        <section class="section" id="overview">
+            <h2>Portfolio Overview</h2>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Student</h3>
+                    <p><span class="label">Name:</span> Jose Miguel M. Estacio</p>
+                    <p><span class="label">Program:</span> 2nd Year, IT-WEBDEV</p>
+                    <p><span class="label">Section:</span> WD-202</p>
+                </div>
+
+                <div class="card">
+                    <h3>Course</h3>
+                    <p><span class="label">Subject:</span> 2CALC-IT</p>
+                    <p><span class="label">Instructor:</span> Jonathan Santos Mallari</p>
+                    <p><span class="label">Term:</span> First Semester, Finals</p>
+                </div>
+
+                <div class="card">
+                    <h3>Submissions</h3>
+                    <p><span class="label">Artifacts shown:</span> <span id="artifactCount"></span></p>
+                    <p><span class="label">Recorded points:</span> 396 / 435 (91.0%)</p>
+                    <p><span class="label">Topics:</span> Functions, Limits, Differentiation, Exams</p>
+                    <p class="related"><a href="#learning">View all artifacts</a></p>
+                </div>
+            </div>
+
+            <p class="related back-to-top"><a href="#home">Back to top</a></p>
+        </section>
+
+
+        <!-- My calculus journey (topics) -->
+        <section class="section" id="journey">
+            <h2>My Calculus Journey</h2>
+            <p class="text-block">
+                These are the topics we covered in 2CALC-IT. Each one links to the artifacts that
+                show my work on it.
+            </p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Functions and Function Operations</h3>
+                    <p>
+                        We learned to add, subtract, multiply, and compose functions. In a composition
+                        like (f∘g)(x), g(x) goes inside f, so the order matters.
+                    </p>
+                    <p class="related">
+                        Artifacts:
+                        <a href="#art-0">Composition of Functions</a>,
+                        <a href="#art-1">Calculus Poster</a>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Limits</h3>
+                    <p>
+                        We learned what a limit is and how to find one by plugging in the number,
+                        factoring, or using the conjugate when the result is 0/0.
+                    </p>
+                    <p class="related">
+                        Artifacts:
+                        <a href="#art-2">Evaluating Limits</a>,
+                        <a href="#art-3">Card Deck</a>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Rules of Differentiation</h3>
+                    <p>
+                        We learned the constant, power, sum, difference, product, quotient, and chain
+                        rules, and how to rewrite roots as fractional exponents.
+                    </p>
+                    <p class="related">
+                        Artifacts:
+                        <a href="#art-4">Basic Rules</a>,
+                        <a href="#art-5">Product and Quotient</a>,
+                        <a href="#art-6">Chain Rule</a>
+                    </p>
+                </div>
+            </div>
+
+            <p class="related">
+                The prelim and midterm tested these topics:
+                <a href="#art-7">Prelim</a>, <a href="#art-8">Midterm</a>.
+            </p>
+
+            <p class="related back-to-top"><a href="#home">Back to top</a></p>
+        </section>
+
+
+        <!-- Learning artifacts (cards are built by js/main.js from js/data.js) -->
+        <section class="section" id="learning">
+            <h2>Learning Artifacts</h2>
+            <p class="text-block">
+                My work is grouped by type: activities, examinations, and group projects. Each card
+                has the title, topic, a short description, the artifact, and my reflection. Click any
+                image to make it bigger. <a href="#growth">My Growth</a> shows how my scores changed,
+                and <a href="#tech">Calculus in IT</a> shows where this connects to my field.
+            </p>
+
+            <div id="artifactList"></div>
+
+            <p class="related back-to-top"><a href="#home">Back to top</a></p>
+        </section>
+
+
+        <!-- Calculus in IT and web development -->
+        <section class="section" id="tech">
+            <h2>Calculus in IT and Web Development</h2>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Rate of change: UI animation</h3>
+                    <p>
+                        When you animate something with CSS or JavaScript, you are changing its position
+                        over time. Speed is the derivative of position. Easing like ease-in and ease-out
+                        just controls how that speed changes, so the movement feels smooth instead of
+                        jumpy.
+                    </p>
+                    <p class="related">
+                        Practiced in:
+                        <a href="#art-4">Differentiation Rules</a>,
+                        <a href="#art-6">Chain Rule</a>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Optimization: performance</h3>
+                    <p>
+                        Optimization means finding the best value, like the fastest or the smallest.
+                        A derivative equals zero at a high or low point. In development it is like
+                        choosing a cache size or batch size that gives the lowest load time.
+                    </p>
+                    <p class="related">
+                        Built on:
+                        <a href="#art-5">Product and Quotient Rule</a>,
+                        <a href="#art-6">Chain Rule</a>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Limits: getting close to a value</h3>
+                    <p>
+                        A limit is the value something gets close to, even if it never reaches it.
+                        Programs use this idea when they repeat a step until the change is tiny.
+                        A 0/0 expression also has to be rewritten before a computer can calculate it.
+                    </p>
+                    <p class="related">
+                        Practiced in:
+                        <a href="#art-2">Evaluating Limits</a>,
+                        <a href="#art-3">Card Deck</a>
+                    </p>
+                </div>
+            </div>
+
+            <p class="related back-to-top"><a href="#home">Back to top</a></p>
+        </section>
+
+
+        <!-- My growth in calculus -->
+        <section class="section" id="growth">
+            <h2>My Growth in Calculus</h2>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Early work</h3>
+                    <p>
+                        Activity #2 on rational limits was my lowest activity score at 19/25 (76%).
+                        Limits were the first topic where plugging in the number didn't work, so I had
+                        to learn to fix a 0/0 first. I lost 6 points here, so it's clear that limits
+                        needed more practice.
+                    </p>
+                    <p class="related">See: <a href="#art-2">Evaluating Limits</a></p>
+                </div>
+
+                <div class="card">
+                    <h3>Later work</h3>
+                    <p>
+                        My differentiation activities were 20/20 (Activity #4), 45/45 (Activity #5),
+                        and 20/20 (Activity #6). Picking the right rule and showing every step got a lot
+                        easier compared with the limits activity.
+                    </p>
+                    <p class="related">
+                        See:
+                        <a href="#art-4">Differentiation Rules</a>,
+                        <a href="#art-5">Product and Quotient Rule</a>,
+                        <a href="#art-6">Chain Rule</a>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>What changed and why</h3>
+                    <p>
+                        I started labeling the parts of a problem before solving it: the inner and outer
+                        function for the chain rule, and u and v for the product and quotient rules.
+                        I also checked if a limit was 0/0 before plugging in the number. This cut down
+                        my careless mistakes. My exams were different though: 41/50 on the prelim and
+                        26/50 on the midterm, so using the rules on my own under time pressure is what
+                        I need to work on.
+                    </p>
+                    <p class="related">
+                        See: <a href="#art-7">Prelim</a>, <a href="#art-8">Midterm</a>
+                    </p>
+                </div>
+            </div>
+
+            <figure class="score-figure">
+                <img src="images/scores.png" loading="lazy"
+                     alt="Grade portal record for Estacio, Jose Miguel M.: 10 activities recorded, 396 of 435 points, 91.0 percent">
+                <figcaption>
+                    My recorded scores from the class grade portal: 396 / 435 points (91.0%).
+                </figcaption>
+            </figure>
+
+            <p class="related back-to-top"><a href="#home">Back to top</a></p>
+        </section>
+
+
+        <!-- Final reflection -->
+        <section class="section" id="reflection">
+            <h2>Final Reflection</h2>
+
+            <div class="text-block">
+                <p>
+                    Taking 2CALC-IT changed how I see Calculus. At first I thought it was just a theory
+                    subject that had nothing to do with programming. By the end of the semester I learned
+                    that Calculus is mostly about change: how fast something changes and what value it
+                    gets close to. Those ideas show up in software, like animations and performance
+                    tuning.
+                </p>
+                <p>
+                    The most important topics I learned were functions and their operations, limits, and
+                    the rules of differentiation. Limits taught me to look at what a function gets close
+                    to, and to fix a 0/0 by factoring or using the conjugate instead of guessing.
+                    Differentiation taught me to pick the right tool: the power rule for single terms,
+                    the product and quotient rules for combined expressions, and the chain rule for a
+                    function inside another function. By my scores, limits were the hardest for me. I got
+                    19/25 on Activity #2, my lowest activity result, because plugging in the number
+                    doesn't work there and the expression has to be rewritten first.
+                </p>
+                <p>
+                    The way I solve problems changed too. Early on I rushed to get an answer. Later I
+                    wrote out each step, labeled the parts, and checked my result. It's kind of like
+                    debugging: break the problem into pieces, test each one, and find where the error
+                    started. My activity scores stayed high, but my exam results dropped from 41/50 on
+                    the prelim to 26/50 on the midterm. That showed me that finishing activities with my
+                    notes is not the same as remembering the rules on my own. Differentiation was the
+                    topic I did best in, with full marks on Activities #4, #5, and #6, while my lowest
+                    results on limits and the midterm showed me where my method was weakest.
+                </p>
+                <p>
+                    Calculus is also useful for my goal of becoming a full-stack developer. Rates of
+                    change explain how animations and easing work on a page, optimization applies to
+                    tuning performance, and limits show up in programs that repeat a step until a value
+                    settles. The chain rule is even behind how machine learning models are trained. I
+                    won't be solving these by hand every day, but knowing them helps me understand the
+                    tools I use.
+                </p>
+                <p>
+                    I still need to get faster and more accurate under time pressure. I started the
+                    course expecting Calculus to be separate from programming, and by the end I could
+                    name specific places where it shows up in my field. That changed how I see the
+                    subject. In future subjects and work, I want to keep using the habits this course
+                    gave me: breaking problems into parts, checking each step, and learning from my
+                    mistakes.
+                </p>
+                <p class="related">
+                    Evidence for this reflection:
+                    <a href="#learning">artifacts</a>,
+                    <a href="#growth">my growth</a>, and
+                    <a href="#tech">Calculus in IT</a>.
+                </p>
+            </div>
+
+            <p class="related back-to-top"><a href="#home">Back to top</a></p>
+        </section>
+
+
+        <!-- References and acknowledgments -->
+        <section class="section" id="references">
+            <h2>References and Acknowledgments</h2>
+
+            <ul class="reference-list">
+                <li>
+                    <strong>Course materials:</strong> lecture notes, activities, and exams from
+                    Jonathan Santos Mallari.
+                </li>
+                <li>
+                    <strong>Tools:</strong> HTML, CSS, and JavaScript, with no external libraries.
+                </li>
+                <li>
+                    <strong>AI assistance:</strong> I coded the whole portfolio by myself using HTML, 
+                    CSS, and JavaScript. I only used Claude (Anthropic) to help me come up with some 
+                    ideas and suggestions, especially for the design and content. I did the actual coding, 
+                    editing, and putting everything together. The scores, group works, photos, screenshots, 
+                    reflections, and other information in the portfolio are also based on my own work and 
+                    experience.
+                </li>
+                <li>
+                    <strong>Where these appear:</strong> group work and the score screenshot are in
+                    <a href="#learning">Learning Artifacts</a> and <a href="#growth">My Growth</a>.
+                </li>
+                <li>
+                    <strong>Other sources:</strong> the group poster, card deck, and infomercial were
+                    made by my group in WD-202 (members are listed on the poster). Scores come from the
+                    class grade portal. The heading font is Kalam from Google Fonts.
+                </li>
+            </ul>
+
+            <p class="related back-to-top"><a href="#home">Back to top</a></p>
+        </section>
+
+    </main>
+
+
+    <!-- Image viewer (opens when an image is clicked) -->
+    <dialog id="imageViewer" aria-label="Enlarged artifact">
+        <img alt="">
+    </dialog>
+
+
+    <footer class="site-footer">
+        <img class="footer-seal" src="images/hau-seal.png" alt="Holy Angel University seal">
+        Built with the help of Claude (Anthropic). Jose Miguel M. Estacio &bull; 2CALC-IT E-Portfolio
+        &bull; First Semester, Finals
+    </footer>
+
+
+    <!-- Scripts: data first, then the code that uses it -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
